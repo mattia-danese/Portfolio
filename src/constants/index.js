@@ -121,6 +121,26 @@ import {
     },
   ];
   
+//   tags: [
+//     {
+//       name: "Python-Flask",
+//       color: "yellow-text-gradient",
+//     },
+//     {
+//       name: "Twilio-API",
+//       color: "green-text-gradient",
+//     },
+//     {
+//       name: "GoogleNews-API",
+//       color: "blue-text-gradient",
+//     },
+//     {
+//         name: "ChatGPT-API",
+//         color: "orange-text-gradient",
+//       },
+//   ],
+
+
   const experiences = [
     {
       title: "Full Stack Intern",
@@ -128,6 +148,20 @@ import {
       icon: massEnergize,
       iconBg: "#E6DEDD",
       date: "Jun 2022 - Aug 2022",
+      tags: [
+        {
+            name: "React",
+            color: "blue-text-gradient"
+        },
+        {
+            name: "Django",
+            color: "green-text-gradient"
+        },
+        {
+            name: "Google-API",
+            color: "orange-text-gradient"
+        },
+      ],
       points: [
         "Used the Google Docs API to implement efficient importing and exporting of user content to the MassEnergize Admin Portal.",
         "Designed the specific import and export template docs through talks directly with clients.",
@@ -142,6 +176,16 @@ import {
         icon: WAISN,
         iconBg: "#383E56",
         date: "Oct 2021 - Dec 2021",
+        tags: [
+            {
+                name: "React",
+                color: "blue-text-gradient"
+            },
+            {
+                name: "Django",
+                color: "green-text-gradient"
+            },
+        ],
         points: [
           "Debugged and addressed several issues of the WAISN Resource Finder.",
           "Added additional functionality and desired features to the Resource Finder as they were presented to me directly from clients.",
@@ -155,6 +199,16 @@ import {
       icon: koc,
       iconBg: "#383E56",
       date: "July 2021 - Aug 2021",
+      tags: [
+        {
+            name: "Python",
+            color: "blue-text-gradient"
+        },
+        {
+            name: "Algorand-Blockchain",
+            color: "violet-text-gradient"
+        },
+      ],
       points: [
         "Implemented anonymous and decentralized online donation scheme as a public ledger (i.e. blockchain) application",
         "Used the Algorand blockchain and Python SDK provided by Algorand.",
@@ -166,6 +220,16 @@ import {
       icon: conedison,
       iconBg: "#E6DEDD",
       date: "July 2018 - Aug 2018",
+      tags: [
+        {
+            name: "VBA",
+            color: "green-text-gradient"
+        },
+        {
+            name: "AVAIL",
+            color: "orange-text-gradient"
+        },
+      ],
       points: [
         "Added various functionality to Excel spreadsheets, utilized by various employees in the Control Center, with VBA.",
         "Used AVAIL software to compile 200+ geo-fences around MTA signal powering structures which increased the Control Center's efficiency and ability to track Con Edison trucks and organize truck-job assignments.",
