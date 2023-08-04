@@ -26,6 +26,7 @@ import {
     ListenUp,
     imageCompressor,
     sphereMap,
+    whereToWatch,
   } from "../assets";
   
   export const navLinks = [
@@ -151,7 +152,7 @@ import {
       tags: [
         {
             name: "React",
-            color: "blue-text-gradient"
+            color: "lightblue-text-gradient"
         },
         {
             name: "Django",
@@ -179,7 +180,7 @@ import {
         tags: [
             {
                 name: "React",
-                color: "blue-text-gradient"
+                color: "lightblue-text-gradient"
             },
             {
                 name: "Django",
@@ -284,19 +285,6 @@ import {
         image: sphereMap,
         source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20175%20-%20Computer%20Graphics/Assignments/a5",
     },
-    // {
-    //   name: "Scan Cleaner",
-    //   description:
-    //     "A C++ application that removes black edges from PPM images. This can be used to clean up badly scanned files or images that  have unwanted black pixels on the edges.",
-    //   tags: [
-    //     {
-    //       name: "C",
-    //       color: "violet-text-gradient",
-    //     },
-    //   ],
-    //   image: jobit,
-    //   source_code_link: "https://github.com/",
-    // },
     {
       name: "Image Compressor and Decompressor",
       description:
@@ -314,6 +302,40 @@ import {
       image: imageCompressor,
       source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20040%20-%20Machine%20Structure%20and%20Assembly/Homeworks/hw4",
     },
+    {
+        name: "Streaming Finder",
+        description:
+          "A React.js application that displays the streaming information of a user-provided movie or TV show. Users can choose which streaming services and countries their search should consider. Data is retreived from an external API and is displayed in tabular format.",
+        tags: [
+          {
+            name: "React",
+            color: "lightblue-text-gradient",
+          },
+          {
+            name: "Tailwind",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "REST-API",
+            color: "orange-text-gradient",
+          },
+        ],
+        image: whereToWatch,
+        source_code_link: "https://github.com/mattia-danese/MovieStreamingFinder",
+    },
+    // {
+    //     name: "Scan Cleaner",
+    //     description:
+    //       "A C++ application that removes black edges from PPM images. This can be used to clean up badly scanned files or images that  have unwanted black pixels on the edges.",
+    //     tags: [
+    //       {
+    //         name: "C",
+    //         color: "violet-text-gradient",
+    //       },
+    //     ],
+    //     image: sphereMap,
+    //     source_code_link: "https://github.com/",
+    //   },
   ];
   
   export { services, technologies, experiences, projects };

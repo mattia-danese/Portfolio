@@ -48,7 +48,10 @@ const sphereMap = {
     type: "png"
 }
 
-
+const whereToWatch = {
+    src: "https://www.youtube.com/embed/XaZ_9Dsh4vg",
+    type: "video"
+}
 
 export {
   logo,
@@ -82,4 +85,5 @@ export {
   ListenUp,
   imageCompressor,
   sphereMap,
+  whereToWatch,
 };
