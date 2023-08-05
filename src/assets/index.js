@@ -32,6 +32,7 @@ import conedison from "./company/conedison.png";
 // project media
 import imageC from "./imageCompressor.png"
 import sphere from "./sphere.png";
+import scan from "./scanCleaner.png";
 
 const ListenUp = {
     src: "https://www.youtube.com/embed/EtUZNDwxMnA",
@@ -51,6 +52,11 @@ const sphereMap = {
 const whereToWatch = {
     src: "https://www.youtube.com/embed/XaZ_9Dsh4vg",
     type: "video"
+}
+
+const scanCleaner = {
+    src: scan,
+    type: "png"
 }
 
 export {
@@ -86,4 +92,5 @@ export {
   imageCompressor,
   sphereMap,
   whereToWatch,
+  scanCleaner,
 };

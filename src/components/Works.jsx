@@ -20,7 +20,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link  
             >
                 <div className='relative w-full h-[230px]'>
                     {image.type === "png" ? 
-                        <img src={image.src} alt={name} className='w-full h-full object-cover rounded-2xl'/> : 
+                        <img src={image.src} alt={name} className={`w-full h-full ${image.src.includes('scan') ? 'object-contain' : 'object-cover'} rounded-2xl`}/> : 
                         
                         <iframe
                             className='w-full h-full object-cover rounded-2xl z-10000'

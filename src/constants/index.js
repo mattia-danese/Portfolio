@@ -27,6 +27,7 @@ import {
     imageCompressor,
     sphereMap,
     whereToWatch,
+    scanCleaner,
   } from "../assets";
   
   export const navLinks = [
@@ -323,19 +324,19 @@ import {
         image: whereToWatch,
         source_code_link: "https://github.com/mattia-danese/MovieStreamingFinder",
     },
-    // {
-    //     name: "Scan Cleaner",
-    //     description:
-    //       "A C++ application that removes black edges from PPM images. This can be used to clean up badly scanned files or images that  have unwanted black pixels on the edges.",
-    //     tags: [
-    //       {
-    //         name: "C",
-    //         color: "violet-text-gradient",
-    //       },
-    //     ],
-    //     image: sphereMap,
-    //     source_code_link: "https://github.com/",
-    //   },
+    {
+        name: "Scan Cleaner",
+        description:
+          "A C application that removes black edges from images, where a 'black edge' are black pixels on the edge or black pixels connected to other black edges. This can be used to clean up badly scanned files or images that  have unwanted black pixels on the edges.",
+        tags: [
+          {
+            name: "C",
+            color: "violet-text-gradient",
+          },
+        ],
+        image: scanCleaner,
+        source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20040%20-%20Machine%20Structure%20and%20Assembly/Homeworks/hw2",
+      },
   ];
   
   export { services, technologies, experiences, projects };
