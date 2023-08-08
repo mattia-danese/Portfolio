@@ -33,6 +33,7 @@ import conedison from "./company/conedison.png";
 import imageC from "./imageCompressor.png"
 import sphere from "./sphere.png";
 import scan from "./scanCleaner.png";
+import rl_model from "./rl_model.png";
 
 const ListenUp = {
     src: "https://www.youtube.com/embed/EtUZNDwxMnA",
@@ -56,6 +57,11 @@ const whereToWatch = {
 
 const scanCleaner = {
     src: scan,
+    type: "png"
+}
+
+const goalie = {
+    src: rl_model,
     type: "png"
 }
 
@@ -93,4 +99,5 @@ export {
   sphereMap,
   whereToWatch,
   scanCleaner,
+  goalie,
 };

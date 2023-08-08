@@ -28,6 +28,7 @@ import {
     sphereMap,
     whereToWatch,
     scanCleaner,
+    goalie,
   } from "../assets";
   
   export const navLinks = [
@@ -279,7 +280,7 @@ import {
             color: "orange-text-gradient",
           },
           {
-            name: "shaders",
+            name: "Shaders",
             color: "blue-text-gradient",
           },
         ],
@@ -296,7 +297,7 @@ import {
             color: "violet-text-gradient",
         },
         {
-            name: "bit-packing",
+            name: "Bit-Packing",
             color: "orange-text-gradient",
         },
       ],
@@ -336,6 +337,23 @@ import {
         ],
         image: scanCleaner,
         source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20040%20-%20Machine%20Structure%20and%20Assembly/Homeworks/hw2",
+      },
+      {
+        name: "Goalie Positon: RL Model",
+        description:
+          "A Reinforcement Learning project where a model that learns the ideal goalkeeper given the position of an incoming attacker. The environment is composed of a two dimension shot distribution (i.e. heatmap) for each attacking position and the model is a Multi-Armed Bandit agents.",
+        tags: [
+          {
+            name: "Python",
+            color: "yellow-text-gradient",
+          },
+          {
+            name: "Reinforcement-Learning",
+            color: "green-text-gradient",
+          },
+        ],
+        image: goalie,
+        source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20138%20-%20Reinforcement%20Learning/Final%20Project/src",
       },
   ];
   
