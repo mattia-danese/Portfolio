@@ -24,14 +24,25 @@ const Navbar = () => {
                 <p className='text-white text-[18px] font-bold cursor-pointer flex'>Mattia Danese&nbsp;<span>| SWE <span className='lg:inline hidden'>Portfolio</span></span></p>
             </Link>
             <ul className='list-none hidden md:flex flex-row gap-10'>
-                {navLinks.map((Link) => (
-                    <li key={Link.id}
-                        className={`${active === Link.title ? "text-white" : "text-secondary"
-                        } hover:text-white text-[18px] font-medium cursor-pointer`}
-                        onClick={() => setActive(Link.title)}>
-                        <a href={`#${Link.id}`}>{Link.title}</a>
-                    </li>
-                ))}
+                {navLinks.map((Link) => {
+                    if (Link.id === "resume") {
+                        console.log("HERE");
+                        return <li key={Link.id}
+                                   className='text-secondary hover:text-white text-[18px] font-medium cursor-pointer'
+                                   
+                                >
+                                    <a href="src/assets/Resume.pdf" download={"Mattia Danese Resume.pdf"}>Resume</a>
+                                </li>
+                    }
+                    
+                    
+                    return <li key={Link.id}
+                                className={`${active === Link.title ? "text-white" : "text-secondary"
+                                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                                onClick={() => setActive(Link.title)}>
+                                <a href={`#${Link.id}`}>{Link.title}</a>
+                            </li>
+                })}
             </ul>
             {/* FOR MOBILE NAV */}
             <div className='md:hidden flex flex-1 justify-end items-center'>

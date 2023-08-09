@@ -48,10 +48,14 @@ const About = () => {
             variants={fadeIn("", "", 0.1, 1)}
             className='mt-4 text-secondary text-[17px] max-w-3 leading-[30px]'
         >
-            I'm a skilled software developer with experience in Python, JavaScript, and C/C++. I also have experience in numerous frameworks such as React, Node.js, Three.js, Flask, and Django. I'm a quick learner and collaborate closely with both clients and teammates to create efficient, scalable, and user-friendly solutions that solve real-world problems.
+            I'm a skilled software developer with experience in Python, JavaScript, and C/C++. I also have experience in numerous frameworks such as React, Node.js, Three.js, Flask, and Django. I'm a quick learner and collaborate closely with both clients and teammates to create efficient, scalable, and user-friendly solutions that solve real-world problems.        
         </motion.p>
 
-        <div className='mt-20 flex flex-wrap gap-10'>
+        <motion.div variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3 leading-[30px]'>
+            I graduated from Tufts University College of Engineering with a Bachelor's and Master's Degree in Computer Science.
+        </motion.div>
+
+        <div className='mt-10 flex flex-wrap gap-10'>
             {services.map((service, index) => (
                 <ServiceCard key={service.title} index={service.index} {...service} />
             ))}

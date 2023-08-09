@@ -45,6 +45,10 @@ import {
         title: "Projects",
     },
     {
+        id: "resume",
+        title: "Resume",
+      },
+    {
       id: "contact",
       title: "Contact",
     },
@@ -339,7 +343,7 @@ import {
         source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20040%20-%20Machine%20Structure%20and%20Assembly/Homeworks/hw2",
       },
       {
-        name: "Goalie Positon: RL Model",
+        name: "Goalie Position: RL Model",
         description:
           "A Reinforcement Learning project where a model that learns the ideal goalkeeper given the position of an incoming attacker. The environment is composed of a two dimension shot distribution (i.e. heatmap) for each attacking position and the model is a Multi-Armed Bandit agents.",
         tags: [
