@@ -2,7 +2,7 @@ export const textVariant = (delay) => {
     return {
       hidden: {
         y: -50,
-        opacity: 0,
+        // opacity: 0,
       },
       show: {
         y: 0,
@@ -16,12 +16,12 @@ export const textVariant = (delay) => {
     };
   };
   
-  export const fadeIn = (direction, type, delay, duration) => {
+  export const fadeIn = (direction, type, delay, duration, distance) => {
     return {
       hidden: {
-        x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-        y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
-        opacity: 0,
+        x: direction === "left" ? distance : direction === "right" ? -distance : 0,
+        y: direction === "up" ? distance : direction === "down" ? -distance : 0,
+        // opacity: 0,
       },
       show: {
         x: 0,
@@ -41,7 +41,7 @@ export const textVariant = (delay) => {
     return {
       hidden: {
         scale: 0,
-        opacity: 0,
+        // opacity: 0,
       },
       show: {
         scale: 1,

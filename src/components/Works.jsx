@@ -9,7 +9,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link  }) => {
     return (
-        <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+        <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75, 70)}>
             <Tilt
                 options={{
                     max: 25,
@@ -73,7 +73,7 @@ const Works = () => {
                 The following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories. Through these projects, my abilities to solve complex problems, work with different technologies, and manage projects effectively are reflected.
             </motion.p>
         </div>
-        <div className='mt-20 flex flex-wrap gap-7'>
+        <div className='md:mt-10 flex flex-wrap gap-7'>
             {projects.map((project, index) => (
                 <ProjectCard 
                     key={`project-${index}`}
