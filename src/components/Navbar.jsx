@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { styles } from '../styles';
-import { navLinks } from '../constants/index.js';
+import { navLinks, navMediaLinks } from '../constants/index.js';
 import { logo, menu, close } from '../assets';
 
 const Navbar = () => {
@@ -12,21 +12,31 @@ const Navbar = () => {
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
         <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-            <Link
-                to="/"
-                className='flex items-center gap-2'
-                onClick={() => {
-                    setActive(""); 
-                    window.scrollTo(0,0);
-                }}
-            >
-                <img src={logo} alt="logo" className='w-9 h-9 object-contain'/>
-                <p className='text-white text-[18px] font-bold cursor-pointer flex'>Mattia Danese&nbsp;<span>| SWE <span className='lg:inline hidden'>Portfolio</span></span></p>
-            </Link>
+            <div className='flex gap-1 '>
+                <Link
+                    to="/"
+                    className='flex items-center gap-2'
+                    onClick={() => {
+                        setActive(""); 
+                        window.scrollTo(0,0);
+                    }}
+                >
+                    <img src={logo} alt="logo" className='w-9 h-9 object-contain'/>
+                    <p className='text-white text-[18px] font-bold cursor-pointer flex'>
+                        Mattia Danese&nbsp;<span><span className='navTitle:inline hidden'>| SWE Portfolio |</span></span>
+                    </p>
+                </Link>
+                <div className='flex items-center gap-2'>
+                    {navMediaLinks.map((media) => {
+                            return <Link to={media.link} target="_blank" className='align-middle'> <img className='w-5 h-5 object-contain' src={media.img} alt={media.id} title={`My ${media.id}`} /> </Link>
+                    })}
+                </div>
+            </div>
+            
+            
             <ul className='list-none hidden md:flex flex-row gap-10'>
                 {navLinks.map((Link) => {
                     if (Link.id === "resume") {
-                        console.log("HERE");
                         return <li key={Link.id}
                                    className='text-secondary hover:text-white text-[18px] font-medium cursor-pointer'
                                    

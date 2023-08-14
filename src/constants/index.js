@@ -1,4 +1,8 @@
 import {
+    githubRed,
+    linkedIn,
+    resume,
+    
     mobile,
     backend,
     creator,
@@ -31,6 +35,24 @@ import {
     goalie,
   } from "../assets";
   
+  export const navMediaLinks = [
+    {
+        id: "GitHub",
+        img: githubRed,
+        link: "https://github.com/mattia-danese",
+    },
+    {
+        id: "LinkedIn",
+        img: linkedIn,
+        link: "https://www.linkedin.com/in/mattia-danese-87075617a/",
+    },
+    {
+        id: "Resume",
+        img: resume,
+        link: "src/assets/Resume.pdf",
+    }
+  ];
+
   export const navLinks = [
     {
       id: "about",
@@ -44,10 +66,10 @@ import {
         id: "projects",
         title: "Projects",
     },
-    {
-        id: "resume",
-        title: "Resume",
-      },
+    // {
+    //     id: "resume",
+    //     title: "Resume",
+    // },
     {
       id: "contact",
       title: "Contact",

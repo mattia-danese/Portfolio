@@ -7,6 +7,9 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import githubRed from "./github-red.png";
+import linkedIn from "./linkedin.png";
+import resume from "./resume.png";
 
 // technologies logos
 import git from "./tech/git.png";
@@ -74,6 +77,9 @@ export {
   github,
   menu,
   close,
+  githubRed,
+  linkedIn,
+  resume,
 
   git,
   javascript,
