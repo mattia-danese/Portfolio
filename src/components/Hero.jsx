@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
+import { profile } from '../assets';
 
 
 const Hero = () => {
@@ -16,7 +17,10 @@ const Hero = () => {
             </div>
 
             <div>
-                <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm <span className='text-[#915eff]'>Mattia</span></h1>
+                <h1 className={`${styles.heroHeadText} text-white`}>
+                    Hi, I'm <span className='text-[#915eff]'>Mattia</span>
+                    {/* <img src='' alt='' /> */}
+                </h1>
                 <p className={`${styles.heroSubText} mt-2 text-white-100`}>
                     I'm a Software Developer with a specific <br className='sm: hidden block'/> interest in <span className='text-[#915eff]'>Cybersecurity</span> and <span className='text-[#915eff]'>Full Stack <br className='sm: hidden block'/> Applications</span>
                 </p>

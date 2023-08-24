@@ -49,7 +49,7 @@ import {
     {
         id: "Resume",
         img: resume,
-        link: "src/assets/Resume.pdf",
+        link: "src/assets/Mattia\ Danese\ Resume.pdf",
     }
   ];
 
@@ -66,10 +66,6 @@ import {
         id: "projects",
         title: "Projects",
     },
-    // {
-    //     id: "resume",
-    //     title: "Resume",
-    // },
     {
       id: "contact",
       title: "Contact",
@@ -367,7 +363,7 @@ import {
       {
         name: "Goalie Position: RL Model",
         description:
-          "A Reinforcement Learning project where a model that learns the ideal goalkeeper given the position of an incoming attacker. The environment is composed of a two dimension shot distribution (i.e. heatmap) for each attacking position and the model is a Multi-Armed Bandit agents.",
+          "A Reinforcement Learning application where a Multi-Armed Bandit agent learns optimal goalkeeper positioning given the position of an incoming attacker. The attacker chooses where to shoot based on a two dimensional shot distribution heatmap relative to the attacker's poistion, unbeknownst to the goalkeeper agent.",
         tags: [
           {
             name: "Python",

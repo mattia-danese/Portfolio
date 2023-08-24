@@ -1,3 +1,6 @@
+// profile pic
+import profile from "./profilepic.png";
+
 // site logos
 import logo from "./logo.svg";
 import backend from "./backend.png";
@@ -69,6 +72,8 @@ const goalie = {
 }
 
 export {
+  profile,
+
   logo,
   backend,
   creator,

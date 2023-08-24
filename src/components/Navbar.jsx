@@ -28,24 +28,14 @@ const Navbar = () => {
                 </Link>
                 <div className='flex items-center gap-2'>
                     {navMediaLinks.map((media) => {
-                            return <Link to={media.link} target="_blank" className='align-middle'> <img className='w-5 h-5 object-contain' src={media.img} alt={media.id} title={`My ${media.id}`} /> </Link>
+                            return <Link key={media.id} to={media.link} target="_blank" className='align-middle'> <img className='w-5 h-5 object-contain' src={media.img} alt={media.id} title={`My ${media.id}`} /> </Link>
                     })}
                 </div>
             </div>
             
             
             <ul className='list-none hidden md:flex flex-row gap-10'>
-                {navLinks.map((Link) => {
-                    if (Link.id === "resume") {
-                        return <li key={Link.id}
-                                   className='text-secondary hover:text-white text-[18px] font-medium cursor-pointer'
-                                   
-                                >
-                                    <a href="src/assets/Resume.pdf" download={"Mattia Danese Resume.pdf"}>Resume</a>
-                                </li>
-                    }
-                    
-                    
+                {navLinks.map((Link) => {    
                     return <li key={Link.id}
                                 className={`${active === Link.title ? "text-white" : "text-secondary"
                                 } hover:text-white text-[18px] font-medium cursor-pointer`}
