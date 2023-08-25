@@ -12,7 +12,8 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 import githubRed from "./github-red.png";
 import linkedIn from "./linkedin.png";
-import resume from "./resume.png";
+import resumeLogo from "./resume.png";
+import myResume from "./MattiaDaneseResume.pdf";
 
 // technologies logos
 import git from "./tech/git.png";
@@ -84,7 +85,8 @@ export {
   close,
   githubRed,
   linkedIn,
-  resume,
+  resumeLogo,
+  myResume,
 
   git,
   javascript,

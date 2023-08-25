@@ -1,7 +1,8 @@
 import {
     githubRed,
     linkedIn,
-    resume,
+    resumeLogo,
+    myResume,
     
     mobile,
     backend,
@@ -48,8 +49,8 @@ import {
     },
     {
         id: "Resume",
-        img: resume,
-        link: "src/assets/Mattia\ Danese\ Resume.pdf",
+        img: resumeLogo,
+        link: myResume,
     }
   ];
 
