@@ -45,7 +45,7 @@ import {
     {
         id: "LinkedIn",
         img: linkedIn,
-        link: "https://www.linkedin.com/in/mattia-danese-87075617a/",
+        link: "https://www.linkedin.com/in/danese",
     },
     {
         id: "Resume",
@@ -290,44 +290,6 @@ import {
       source_code_link: "https://github.com/mattia-danese/ListenUp",
     },
     {
-        name: "Spherical Environment Mapping",
-        description:
-          "A C++ application scene that implements spherical environment mapping with shaders. There is a large evironment sphere which represnts the environment and a small sphere in the center which reflects the environment that it is in.",
-        tags: [
-          {
-            name: "C++",
-            color: "violet-text-gradient",
-          },
-          {
-            name: "fltk",
-            color: "orange-text-gradient",
-          },
-          {
-            name: "Shaders",
-            color: "blue-text-gradient",
-          },
-        ],
-        image: sphereMap,
-        source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20175%20-%20Computer%20Graphics/Assignments/a5",
-    },
-    {
-      name: "Image Compressor and Decompressor",
-      description:
-        "A C application that compresses images files and decompresses compressed files. Utilized provided mathematical and RBG algorithms and implemented various bit-packing algorithms through bit-wise arithmetic.",
-      tags: [
-        {
-            name: "C",
-            color: "violet-text-gradient",
-        },
-        {
-            name: "Bit-Packing",
-            color: "orange-text-gradient",
-        },
-      ],
-      image: imageCompressor,
-      source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20040%20-%20Machine%20Structure%20and%20Assembly/Homeworks/hw4",
-    },
-    {
         name: "Streaming Finder",
         description:
           "A React.js application that displays the streaming information of a user-provided movie or TV show. Users can choose which streaming services and countries their search should consider. Data is retreived from an external API and is displayed in tabular format.",
@@ -349,19 +311,6 @@ import {
         source_code_link: "https://github.com/mattia-danese/MovieStreamingFinder",
     },
     {
-        name: "Scan Cleaner",
-        description:
-          "A C application that removes black edges from images, where a 'black edge' are black pixels on the edge or black pixels connected to other black edges. This can be used to clean up badly scanned files or images that  have unwanted black pixels on the edges.",
-        tags: [
-          {
-            name: "C",
-            color: "violet-text-gradient",
-          },
-        ],
-        image: scanCleaner,
-        source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20040%20-%20Machine%20Structure%20and%20Assembly/Homeworks/hw2",
-      },
-      {
         name: "Goalie Position: RL Model",
         description:
           "A Reinforcement Learning application where a Multi-Armed Bandit agent learns optimal goalkeeper positioning given the position of an incoming attacker. The attacker chooses where to shoot based on a two dimensional shot distribution heatmap relative to the attacker's poistion, unbeknownst to the goalkeeper agent.",
@@ -377,6 +326,57 @@ import {
         ],
         image: goalie,
         source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20138%20-%20Reinforcement%20Learning/Final%20Project/src",
+    },
+    {
+        name: "Image Compressor and Decompressor",
+        description:
+          "A C application that compresses images files and decompresses compressed files. Utilized provided mathematical and RBG algorithms and implemented various bit-packing algorithms through bit-wise arithmetic.",
+        tags: [
+          {
+              name: "C",
+              color: "violet-text-gradient",
+          },
+          {
+              name: "Bit-Packing",
+              color: "orange-text-gradient",
+          },
+        ],
+        image: imageCompressor,
+        source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20040%20-%20Machine%20Structure%20and%20Assembly/Homeworks/hw4",
+      },
+    {
+        name: "Spherical Environment Mapping",
+        description:
+          "A C++ application scene that implements spherical environment mapping with shaders. There is a large evironment sphere which represnts the environment and a small sphere in the center which reflects the environment that it is in.",
+        tags: [
+          {
+            name: "C++",
+            color: "violet-text-gradient",
+          },
+          {
+            name: "fltk",
+            color: "orange-text-gradient",
+          },
+          {
+            name: "Shaders",
+            color: "blue-text-gradient",
+          },
+        ],
+        image: sphereMap,
+        source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20175%20-%20Computer%20Graphics/Assignments/a5",
+    },
+    {
+        name: "Scan Cleaner",
+        description:
+          "A C application that removes black edges from images, where a 'black edge' are black pixels on the edge or black pixels connected to other black edges. This can be used to clean up badly scanned files or images that  have unwanted black pixels on the edges.",
+        tags: [
+          {
+            name: "C",
+            color: "violet-text-gradient",
+          },
+        ],
+        image: scanCleaner,
+        source_code_link: "https://github.com/mattia-danese/TuftsUniversity/tree/main/CS%20040%20-%20Machine%20Structure%20and%20Assembly/Homeworks/hw2",
       },
   ];
   
