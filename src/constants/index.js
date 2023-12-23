@@ -23,6 +23,7 @@ import {
     postgresql,
     python,
 
+    emerest,
     massEnergize,
     koc,
     WAISN,
@@ -169,6 +170,36 @@ import {
 
   const experiences = [
     {
+        title: "ML/Backend Software Engineer",
+        company_name: "Emerest Connect",
+        icon: emerest,
+        iconBg: "#E6DEDD",
+        date: "Jan 2024 - Present",
+        tags: [],
+        points: [],
+        // tags: [
+        //   {
+        //       name: "React",
+        //       color: "lightblue-text-gradient"
+        //   },
+        //   {
+        //       name: "Django",
+        //       color: "green-text-gradient"
+        //   },
+        //   {
+        //       name: "Google-API",
+        //       color: "orange-text-gradient"
+        //   },
+        // ],
+        // points: [
+        //   "Used the Google Docs API to implement efficient importing and exporting of user content to the MassEnergize Admin Portal.",
+        //   "Designed the specific import and export template docs through talks directly with clients.",
+        //   "Implemented logic to ensure username uniqueness across all existing MassEnergize Frontend Portal users and new future users.",
+        //   "Restructured the MassEnergize registration page with a focus on simplicity, user experience, and responsiveness.",
+        //   "Identified stale stored media and implemented a monthly cron function to delete such media.",
+        // ],
+      },
+    {
       title: "Full Stack Intern",
       company_name: "MassEnergize",
       icon: massEnergize,
@@ -220,7 +251,7 @@ import {
         ],
     },
     {
-      title: "Research Intern",
+      title: "Blockchain Research Intern",
       company_name: "Koç University",
       icon: koc,
       iconBg: "#383E56",

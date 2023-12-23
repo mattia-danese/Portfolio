@@ -31,6 +31,7 @@ import postgresql from "./tech/postgresql.png";
 import python from "./tech/python.png";
 
 // work logos
+import emerest from "./company/emerest.png";
 import massEnergize from "./company/massEnergize.png";
 import koc from "./company/koc.png";
 import WAISN from "./company/WAISN.png";
@@ -102,6 +103,7 @@ export {
   postgresql,
   python,
 
+  emerest,
   massEnergize,
   koc,
   WAISN,
