@@ -17,11 +17,16 @@ const Hero = () => {
             </div>
 
             <div>
-                <h1 className={`${styles.heroHeadText} text-white`}>
-                    Hi, I'm <span className='text-[#915eff]'>Mattia</span>
-                    {/* <img src='' alt='' /> */}
-                </h1>
-                <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+                <div className='flex gap-4'>
+                    <h1 className={`${styles.heroHeadText} text-white inline align-middle`}>
+                        Hi, I'm <span className='text-[#915eff]'>Mattia</span>
+                    </h1>
+
+                    <img src={profile} className='lg:w-32 lg:h-32 xs:w-24 xs:h-24 xxs:w-32 xxs:h-32 rounded-full inline align-middle'/>
+
+                </div>
+
+                <p className={`${styles.heroSubText} mt-5 text-white-100`}>
                     I'm a Software Developer with a specific <br className='sm: hidden block'/> interest in <span className='text-[#915eff]'>Cybersecurity</span> and <span className='text-[#915eff]'>Full Stack <br className='sm: hidden block'/> Applications</span>
                 </p>
             </div>
