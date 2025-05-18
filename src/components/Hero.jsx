@@ -8,7 +8,7 @@ import { profile } from '../assets';
 const Hero = () => {
   return (
     <section className='relative w-full h-screen mx-auto'>
-        <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl max-auto flex flex-row items-start gap-5`}>
+        <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
             <div className='flex flex-col justify-center items-center mt-5 z-1000000'>
                 {/* DOT */}
                 <div className='w-5 h-5 rounded-full bg-[#915eff]'/> 
@@ -32,11 +32,10 @@ const Hero = () => {
             </div>
         </div>
 
-        <br />
-
-        {/* <ComputersCanvas /> */}
-        <div className="w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] xl:h-[900px]">
-            <ComputersCanvas />
+        <div className="mt-20 sm:mt-28 md:mt-32 lg:mt-40 xl:mt-44">
+            <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
+                <ComputersCanvas />
+            </div>
         </div>
 
 
