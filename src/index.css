@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* hide horizontal scroll */
+}
+
 * {
   margin: 0;
   padding: 0;

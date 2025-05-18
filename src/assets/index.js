@@ -16,19 +16,27 @@ import resumeLogo from "./resume.png";
 import myResume from "./MattiaDaneseResume.pdf";
 
 // technologies logos
-import git from "./tech/git.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import tailwind from "./tech/tailwind.png";
-import threejs from "./tech/threejs.svg";
-import c from "./tech/c.png";
-import cPlusPlus from "./tech/cPlusPlus.png";
-import django from "./tech/django.png";
-import java from "./tech/java.png";
-import postgresql from "./tech/postgresql.png";
-import python from "./tech/python.png";
+import python from "./tech/python.svg";
+import c from "./tech/c.svg";
+import cPlusPlus from "./tech/cPlusPlus.svg";
+import cSharpNet from "./tech/csharp.svg";
+import java from "./tech/java.svg";
+import javascript from "./tech/javascript.svg";
+import typescript from "./tech/typescript.svg";
+import go from "./tech/go.svg";
+import reactjs from "./tech/reactjs.svg";
+import tailwind from "./tech/tailwind.svg";
+import nodejs from "./tech/nodejs.svg";
+import flask from "./tech/flask.svg";
+import django from "./tech/django.svg";
+import aws from "./tech/aws.svg";
+import firebase from "./tech/firebase.svg";
+import docker from "./tech/docker.svg";
+import git from "./tech/git.svg";
+import postman from "./tech/postman.svg"
+import postgresql from "./tech/postgresql.svg";
+import mongodb from "./tech/mongodb.svg";
+import mysql from "./tech/mysql.svg";
 
 // work logos
 import emerest from "./company/emerest.png";
@@ -89,19 +97,27 @@ export {
   resumeLogo,
   myResume,
 
-  git,
-  javascript,
-  mongodb,
-  nodejs,
-  reactjs,
-  tailwind,
-  threejs,
+  python,
   c,
   cPlusPlus,
-  django,
+  cSharpNet,
   java,
+  javascript,
+  typescript,
+  go,
+  reactjs,
+  tailwind,
+  nodejs,
+  flask,
+  django,
+  aws,
+  firebase,
+  docker,
+  git,
+  postman,
   postgresql,
-  python,
+  mongodb,
+  mysql,
 
   emerest,
   massEnergize,

@@ -9,19 +9,27 @@ import {
     creator,
     web,
 
+    python,
+    c,
+    cPlusPlus,
+    cSharpNet,
+    java,
     javascript,
+    typescript,
+    go,
     reactjs,
     tailwind,
     nodejs,
-    mongodb,
-    git,
-    threejs,
-    c,
-    cPlusPlus,
+    flask,
     django,
-    java,
+    aws,
+    firebase,
+    docker,
+    git,
+    postman,
     postgresql,
-    python,
+    mongodb,
+    mysql,
 
     emerest,
     massEnergize,
@@ -95,13 +103,41 @@ import {
   
   const technologies = [
     {
+      name: "Python",
+      icon: python
+    },
+    {
+      name: "C",
+      icon: c,
+    },
+    {
+      name: "C++",
+      icon: cPlusPlus,
+    },
+    {
+      name: "C#/.NET",
+      icon: cSharpNet,
+    },
+    {
+      name: "Java",
+      icon: java,
+    },
+    {
       name: "JavaScript",
       icon: javascript,
     },
     {
+      name: "TypeScript",
+      icon: typescript,
+    },
+    {
+      name: "Go",
+      icon: go,
+    },
+    {
       name: "React JS",
       icon: reactjs,
-    },
+    },  
     {
       name: "Tailwind CSS",
       icon: tailwind,
@@ -111,62 +147,46 @@ import {
       icon: nodejs,
     },
     {
-        name: "Three JS",
-        icon: threejs,
+      name: "Flask",
+      icon: flask,
     },
     {
-        name: "Python",
-        icon: python
+      name: "Django",
+      icon: django
     },
     {
-        name: "Django",
-        icon: django
+      name: "AWS",
+      icon: aws
+    },
+    {
+      name: "Firebase",
+      icon: firebase,
+    },
+    {
+      name: "Docker",
+      icon: docker
+    },
+    {
+      name: "Git",
+      icon: git,
+    },
+    {
+      name: "Postman",
+      icon: postman,
+    },
+    {
+      name: "PostgreSQL",
+      icon: postgresql,
     },
     {
       name: "MongoDB",
       icon: mongodb,
     },
     {
-        name: "Postgresql",
-        icon: postgresql,
-    },
-    {
-        name: "C++",
-        icon: cPlusPlus,
-    },
-    {
-        name: "C",
-        icon: c,
-    },
-    {
-        name: "Java",
-        icon: java,
-    },
-    {
-      name: "git",
-      icon: git,
+      name: "MySQL",
+      icon: mysql,
     },
   ];
-  
-//   tags: [
-//     {
-//       name: "Python-Flask",
-//       color: "yellow-text-gradient",
-//     },
-//     {
-//       name: "Twilio-API",
-//       color: "green-text-gradient",
-//     },
-//     {
-//       name: "GoogleNews-API",
-//       color: "blue-text-gradient",
-//     },
-//     {
-//         name: "ChatGPT-API",
-//         color: "orange-text-gradient",
-//       },
-//   ],
-
 
   const experiences = [
     [{

@@ -1,60 +1,123 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { Decal, Float, OrbitControls, Preload, useTexture} from '@react-three/drei';
+import React, { useRef, useEffect, useState } from 'react';
+import { Float, Decal, Html } from '@react-three/drei';
+import { useLoader, useFrame } from '@react-three/fiber';
+import { TextureLoader } from 'three';
 
-import CanvasLoader from '../Loader';
+const Ball = ({ imgUrl, name, position, scale = 1.2 }) => {
+  const decal = useLoader(TextureLoader, imgUrl);
+  const meshRef = useRef();
 
-const Ball = (props) => {
-    const [decal] = useTexture([props.imgUrl]);
+  const [hovered, setHovered] = useState(false);
+  const [rotationIntensity, setRotationIntensity] = useState(2);
 
-    return (
-        <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-            <ambientLight intensity={0.25} />
-            <directionalLight position={[0,0,0.05]} />
-            {/* <directionalLight position={[0.05,0,0]} />
-            <directionalLight position={[0,0.05,0]} /> */}
-            <mesh castShadow receiveShadow scale={2.75}>
-                <icosahedronGeometry args={[1,1]} />
-                <meshStandardMaterial 
-                    color="#fff8eb"
-                    polygonOffset
-                    polygonOffsetFactor={-5}
-                    flatShading
-                />
-                <Decal 
-                    position={[0,0,1]}
-                    rotation={[2 * Math.PI, 0, 6.25]}
-                    flatShading
-                    map={decal}
-                />
-                {/* <Decal 
-                    position={[0,0,-1]}
-                    rotation={[2 * Math.PI, 0, 6.25]}
-                    flatShading
-                    map={decal}
-                /> */}
-            </mesh>
-        </Float>
-    )
-}
+  // Adjust intensity based on screen width
+  useEffect(() => {
+    const handleResize = () => {
+      setRotationIntensity(window.innerWidth < 943 ? 0.8 : 1.5);
+    };
 
-const BallCanvas = ({ icon }) => {
-    return (
-        <Canvas
-            frameloop='demand'
-            gl={{ preserveDrawingBuffer: true }}
-        >
-            <Suspense fallback={<CanvasLoader />}>
-                <OrbitControls 
-                    enableZoom={false} 
-                    // autoRotate autoRotateSpeed={8.0}
-                />
-                <Ball imgUrl={icon} />
-            </Suspense>
+    handleResize(); // Set initially
+    window.addEventListener('resize', handleResize);
 
-            <Preload all />
-        </Canvas>
-    )
-}
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-export default BallCanvas
+  // Rotate the mesh every frame
+  useFrame((state, delta) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += delta * 0.5;
+    }
+  });
+
+  return (
+    <Float speed={10} rotationIntensity={rotationIntensity} floatIntensity={1}>
+      <mesh
+        ref={meshRef}
+        castShadow
+        receiveShadow
+        scale={scale}
+        position={position}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
+        {hovered && (
+            <Html
+                position={[0, 1.5, 0]} // slightly above the sphere
+                center
+                style={{
+                background: 'rgba(0,0,0,0.7)',
+                color: 'white',
+                padding: '4px 8px',
+                borderRadius: '4px',
+                fontSize: '12px',
+                whiteSpace: 'nowrap',
+                pointerEvents: 'none',
+                }}
+            >
+                {name}
+            </Html>
+        )}
+        
+        <sphereGeometry args={[1, 64, 64]} />
+        <meshStandardMaterial
+          color="#FFFFFF"
+          polygonOffset
+          polygonOffsetFactor={-5}
+          flatShading
+        />
+
+        {/* Front Decal */}
+        <Decal
+          position={[0, 0, 1]}
+          rotation={[0, 0, 6.25]}
+          flatShading
+          map={decal}
+        />
+
+        {/* Back Decal */}
+        <Decal
+          position={[0, 0, -1]}
+          rotation={[Math.PI, 0, Math.PI + 6.25]}
+          flatShading
+          map={decal}
+          depthTest={false}
+          depthWrite={true}
+        />
+
+        {/* Left Decal */}
+        <Decal
+          position={[-1, 0, 0]}                    // left side (negative X)
+          rotation={[0, -Math.PI / 2, 6.25]}        // face outward
+          flatShading
+          map={decal}
+        />
+
+        {/* Right Decal */}
+        <Decal
+          position={[1, 0, 0]}                     // right side (positive X)
+          rotation={[0, Math.PI / 2, 6.25]}       // face outward
+          flatShading
+          map={decal}
+        />
+
+        {/* Top Decal */}
+        <Decal
+          position={[0, 1, 0]}
+          rotation={[-Math.PI / 2, 0, 6.25]}
+          flatShading
+          map={decal}
+        />
+
+        {/* Bottom Decal */}
+        <Decal
+          position={[0, -1, 0]}
+          rotation={[Math.PI / 2, 0, 6.25]}
+          flatShading
+          map={decal}
+        />
+      </mesh>
+    </Float>
+  );
+};
+
+export default Ball;
