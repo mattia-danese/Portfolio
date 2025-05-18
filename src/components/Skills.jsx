@@ -47,7 +47,7 @@ const BallsGrid = ({ ballScale, spacing, numCols, windowWidth }) => {
   );
 };
 
-const Tech = () => {
+const Skills = () => {
   const canvasRef = useRef(null);
   const [layout, setLayout] = useState({
     ballScale: 1.2,
@@ -123,4 +123,4 @@ const Tech = () => {
   );
 };
 
-export default SectionWrapper(Tech, '');
+export default SectionWrapper(Skills, 'skills');

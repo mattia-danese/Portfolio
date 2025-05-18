@@ -23,7 +23,7 @@ const Navbar = () => {
                 >
                     <img src={logo} alt="logo" className='w-9 h-9 object-contain'/>
                     <p className='text-white text-[18px] font-bold cursor-pointer flex'>
-                        Mattia Danese&nbsp;<span><span className='navTitle:inline hidden'>| SWE Portfolio |</span></span>
+                        Mattia Danese
                     </p>
                 </Link>
                 <div className='flex items-center gap-2'>
