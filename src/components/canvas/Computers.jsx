@@ -43,12 +43,12 @@ const ComputersCanvas = () => {
   }, []);
 
   const isMobile = windowSize.width < 500;
-  const scale = windowSize.width < 500 ? 0.5 : windowSize.width < 900 ? 0.6 : 0.75;
+  const scale = windowSize.width < 500 ? 0.6 : windowSize.width < 900 ? 1 : 1.2;
   const position = windowSize.width < 500
-    ? [-4, -1.75, -2.2]
-    : windowSize.width < 900
-    ? [-1, -2.5, -1.8]
-    : [0, -3, -1.5];
+  ? [-4, -1.25, -2.2]
+  : windowSize.width < 900
+  ? [-1, -1.8, -1.8]
+  : [0, -2, -1.5];
 
   return (
     <div style={{ width: '100%', height: '100%' }}>

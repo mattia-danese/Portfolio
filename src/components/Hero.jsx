@@ -7,13 +7,13 @@ import { profile } from '../assets';
 
 const Hero = () => {
   return (
-    <section className='relative w-full h-screen mx-auto'>
-        <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
+    <section className='relative w-full min-h-screen mx-auto'>
+        <div className={`${styles.paddingX} max-w-7xl mx-auto flex flex-row items-start gap-5 pt-32`}>
             <div className='flex flex-col justify-center items-center mt-5 z-1000000'>
                 {/* DOT */}
                 <div className='w-5 h-5 rounded-full bg-[#915eff]'/> 
                 {/* LINE */}
-                <div className='w-1 sm:h-80 h-40 violet-gradient'/>
+                <div className='w-1 sm:h-60 h-48 violet-gradient'/>
             </div>
 
             <div>
@@ -32,13 +32,11 @@ const Hero = () => {
             </div>
         </div>
 
-        <div className="mt-20 sm:mt-28 md:mt-32 lg:mt-40 xl:mt-44">
-            <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
+        <div className="mt-0">
+            <div className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[500px] 2xl:h-[500px] max-h-[400px]">
                 <ComputersCanvas />
             </div>
         </div>
-
-
         {/* Scrolling loop */}
         <div className='absolute bottom-32 xs:bottom-1.5 w-full flex justify-center items-center'>
             <a href='#about'>
