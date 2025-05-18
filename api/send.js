@@ -12,7 +12,7 @@ export default async (req, res) => {
 
   try {
     const data = await resend.emails.send({
-      from: 'contact@mattiadanese.com',
+      from: 'onboarding@resend.dev',
       to: [process.env.TO_EMAIL],
       subject: `New Contact from ${name}`,
       reply_to: email,
