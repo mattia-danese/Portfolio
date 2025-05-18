@@ -21,38 +21,34 @@ const Contact = () => {
         setForm({...form, [name]: value});
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
 
-        emailjs.send(
-            import.meta.env.VITE_SERVICE_ID,
-            import.meta.env.VITE_TEMPLATE_ID,
-            {
-                from_name: form.name,
-                to_name: 'Mattia',
-                from_email: form.email,
-                to_email: import.meta.env.VITE_TO_EMAIL,
+        try {
+            const response = await fetch('/api/send', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: form.name,
+                email: form.email,
                 message: form.message,
-            },
-            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        )
-        .then(() => {
-            setLoading(false);
-            alert("Thank you. I will get back to you as soon as possible!");
-
-            setForm({
-                name: '',
-                email: '',
-                message: '',
+            }),
             });
-        }, (error) => {
-            setLoading(false);
 
-            console.log(error);
-            alert("Something went wrong, your message did not send.")
-        })
-    }
+            const result = await response.json();
+            if (response.ok) {
+            alert("Message sent!");
+            setForm({ name: '', email: '', message: '' });
+            } else {
+            alert(result.error || "Something went wrong");
+            }
+        } catch (err) {
+            console.error(err);
+            alert("Failed to send");
+        }
+        setLoading(false);
+    };
 
     return (
         <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
