@@ -34,7 +34,11 @@ const Hero = () => {
 
         <br />
 
-        <ComputersCanvas />
+        {/* <ComputersCanvas /> */}
+        <div className="w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] xl:h-[900px]">
+            <ComputersCanvas />
+        </div>
+
 
         {/* Scrolling loop */}
         <div className='absolute bottom-32 xs:bottom-1.5 w-full flex justify-center items-center'>
