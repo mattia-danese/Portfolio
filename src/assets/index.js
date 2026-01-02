@@ -33,12 +33,13 @@ import aws from "./tech/aws.svg";
 import firebase from "./tech/firebase.svg";
 import docker from "./tech/docker.svg";
 import git from "./tech/git.svg";
-import postman from "./tech/postman.svg"
+import postman from "./tech/postman.svg";
 import postgresql from "./tech/postgresql.svg";
 import mongodb from "./tech/mongodb.svg";
 import mysql from "./tech/mysql.svg";
 
 // work logos
+import hexmodal from "./company/hexmodal.png";
 import emerest from "./company/emerest.png";
 import massEnergize from "./company/massEnergize.png";
 import koc from "./company/koc.png";
@@ -46,89 +47,86 @@ import WAISN from "./company/WAISN.png";
 import conedison from "./company/conedison.png";
 
 // project media
-import imageC from "./imageCompressor.png"
+import imageC from "./imageCompressor.png";
 import sphere from "./sphere.png";
 import scan from "./scanCleaner.png";
 import rl_model from "./rl_model.png";
 
 const ListenUp = {
-    src: "https://www.youtube.com/embed/EtUZNDwxMnA",
-    type: "video"
-}
+	src: "https://www.youtube.com/embed/EtUZNDwxMnA",
+	type: "video",
+};
 
 const imageCompressor = {
-    src: imageC,
-    type: "png"
-}
+	src: imageC,
+	type: "png",
+};
 
 const sphereMap = {
-    src: sphere,
-    type: "png"
-}
+	src: sphere,
+	type: "png",
+};
 
 const whereToWatch = {
-    src: "https://www.youtube.com/embed/XaZ_9Dsh4vg",
-    type: "video"
-}
+	src: "https://www.youtube.com/embed/XaZ_9Dsh4vg",
+	type: "video",
+};
 
 const scanCleaner = {
-    src: scan,
-    type: "png"
-}
+	src: scan,
+	type: "png",
+};
 
 const goalie = {
-    src: rl_model,
-    type: "png"
-}
+	src: rl_model,
+	type: "png",
+};
 
 export {
-  profile,
-
-  logo,
-  backend,
-  creator,
-  mobile,
-  web,
-  github,
-  menu,
-  close,
-  githubRed,
-  linkedIn,
-  resumeLogo,
-  myResume,
-
-  python,
-  c,
-  cPlusPlus,
-  cSharpNet,
-  java,
-  javascript,
-  typescript,
-  go,
-  reactjs,
-  tailwind,
-  nodejs,
-  flask,
-  django,
-  aws,
-  firebase,
-  docker,
-  git,
-  postman,
-  postgresql,
-  mongodb,
-  mysql,
-
-  emerest,
-  massEnergize,
-  koc,
-  WAISN,
-  conedison,
-
-  ListenUp,
-  imageCompressor,
-  sphereMap,
-  whereToWatch,
-  scanCleaner,
-  goalie,
+	profile,
+	logo,
+	backend,
+	creator,
+	mobile,
+	web,
+	github,
+	menu,
+	close,
+	githubRed,
+	linkedIn,
+	resumeLogo,
+	myResume,
+	python,
+	c,
+	cPlusPlus,
+	cSharpNet,
+	java,
+	javascript,
+	typescript,
+	go,
+	reactjs,
+	tailwind,
+	nodejs,
+	flask,
+	django,
+	aws,
+	firebase,
+	docker,
+	git,
+	postman,
+	postgresql,
+	mongodb,
+	mysql,
+	emerest,
+	massEnergize,
+	koc,
+	WAISN,
+	conedison,
+	ListenUp,
+	imageCompressor,
+	sphereMap,
+	whereToWatch,
+	scanCleaner,
+	goalie,
+	hexmodal,
 };
