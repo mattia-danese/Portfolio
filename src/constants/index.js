@@ -213,7 +213,7 @@ const experiences = [
 		points: [
 			"One of five SWEs in a startup culture handling bug fixes and new feature requests across the entire stack from the database to the frontend UI/UX and anything in between",
 			"Have taken ownership and am the main point of contact for Platform logic relating to our Hex-M product",
-			"Greatly improved DX by indivudally restructuring and redesigning the Platform device detail pages (our main customer touchpoint) to leverage Django templatability and reduce code duplication",
+			"Greatly improved DX by individually restructuring and redesigning the Platform device detail pages (our main customer touchpoint) to leverage Django templatability and reduce code duplication",
 		],
 	},
 	[
