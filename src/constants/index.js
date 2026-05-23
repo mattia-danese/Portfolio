@@ -306,7 +306,7 @@ const experiences = [
 		title: "Full Stack Intern",
 		company_name: "Washington Immigrant Solidarity Network",
 		icon: WAISN,
-		iconBg: "#383E56",
+		iconBg: "#E6DEDD",
 		date: "Oct 2021 - Dec 2021",
 		tags: [
 			{
@@ -329,7 +329,7 @@ const experiences = [
 		title: "Blockchain Research Intern",
 		company_name: "Koç University",
 		icon: koc,
-		iconBg: "#383E56",
+		iconBg: "#E6DEDD",
 		date: "July 2021 - Aug 2021",
 		tags: [
 			{
