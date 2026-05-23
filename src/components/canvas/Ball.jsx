@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Float, Decal, Html } from '@react-three/drei';
 import { useLoader, useFrame } from '@react-three/fiber';
 import { TextureLoader } from 'three';
@@ -23,7 +23,7 @@ const Ball = ({ imgUrl, name, position, scale = 1.2 }) => {
   }, []);
 
   // Rotate the mesh every frame
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (meshRef.current) {
       meshRef.current.rotation.y += delta * 0.5;
     }
@@ -59,11 +59,16 @@ const Ball = ({ imgUrl, name, position, scale = 1.2 }) => {
         )}
         
         <sphereGeometry args={[1, 64, 64]} />
-        <meshStandardMaterial
-          color="#FFFFFF"
+        <meshPhysicalMaterial
+          color="#a99be0"
+          metalness={0.18}
+          roughness={0.22}
+          clearcoat={0.9}
+          clearcoatRoughness={0.16}
+          emissive="#21193f"
+          emissiveIntensity={0.05}
           polygonOffset
           polygonOffsetFactor={-5}
-          flatShading
         />
 
         {/* Front Decal */}

@@ -1,5 +1,5 @@
-import React, { useRef, useLayoutEffect, useState } from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
+import { useRef, useLayoutEffect, useState } from 'react';
+import { Canvas } from '@react-three/fiber';
 import Ball from './canvas/Ball';
 import { SectionWrapper } from '../hoc';
 import { technologies } from '../constants';
@@ -114,8 +114,10 @@ const Skills = () => {
           camera={{ zoom: zoom, position: [0, 0, 100] }}
           gl={{ preserveDrawingBuffer: true }}
         >
-          <ambientLight intensity={0.6} />
-          <directionalLight position={[5, 5, 5]} intensity={1.2} />
+          <ambientLight intensity={0.35} />
+          <directionalLight position={[6, 8, 8]} intensity={1.8} />
+          <pointLight position={[-8, -5, 10]} intensity={0.8} color="#7dd3fc" />
+          <pointLight position={[8, 4, 12]} intensity={0.55} color="#c084fc" />
           <BallsGrid ballScale={ballScale} spacing={spacing} numCols={numCols} windowWidth={windowWidth} />
         </Canvas>
       </div>
