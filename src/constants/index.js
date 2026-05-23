@@ -85,18 +85,22 @@ export const navLinks = [
 const services = [
 	{
 		title: "Full Stack",
+		description: "End-to-end product engineering",
 		icon: web,
 	},
 	{
 		title: "Web & API",
+		description: "Responsive interfaces and robust backend APIs",
 		icon: mobile,
 	},
 	{
 		title: "Automation",
+		description: "Pipelines, workflows, and async systems",
 		icon: backend,
 	},
 	{
-		title: "High-Performance",
+		title: "Scalable Systems",
+		description: "Reliable architecture for real-world scale",
 		icon: creator,
 	},
 ];
