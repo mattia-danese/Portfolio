@@ -1,5 +1,7 @@
 import { BrowserRouter } from "react-router-dom"
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Skills, Works, StarsCanvas } from './components'
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+import { About, Contact, Experience, Hero, Navbar, Skills, Works, StarsCanvas } from './components'
 
 
 const App = () => {
@@ -19,6 +21,7 @@ const App = () => {
                 <Contact />
                 <StarsCanvas />
             </div>
+            <ToastContainer position="bottom-right" theme="dark" />
         </div>
     </BrowserRouter>
   )

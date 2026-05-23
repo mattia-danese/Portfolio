@@ -211,9 +211,10 @@ const experiences = [
 			},
 		],
 		points: [
-			"One of five SWEs in a startup culture handling bug fixes and new feature requests across the entire stack from the database to the frontend UI/UX and anything in between",
-			"Have taken ownership and am the main point of contact for Platform logic relating to our Hex-M product",
-			"Greatly improved DX by individually restructuring and redesigning the Platform device detail pages (our main customer touchpoint) to leverage Django templatability and reduce code duplication",
+			"Designed and built a resilient IoT device test orchestration system for the MicroInverter product, implementing multi-phase Celery task workflows with automatic retry logic and real-time UI progress tracking — eliminating the need for on-site manual device intervention",
+			"Consolidated the ELight and MicroInverter products into a unified device type, refactoring backend models, API serializers, URL routing, and frontend views to simplify device taxonomy across 120,000+ devices and 2,000+ clients in 48 states",
+			"Implemented the ELight anti-tampering detection system end-to-end, from LoRaWAN uplink parsing and device state management through visual inspection workflows and the detail-page status UI",
+			"Shipped features, hotfixes, and infrastructure improvements across the full stack and all 6 IoT product lines, constantly context-switching between products and working directly with the Product and Ops teams in a fast-paced Series A environment",
 		],
 	},
 	[

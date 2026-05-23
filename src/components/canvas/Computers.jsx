@@ -1,11 +1,21 @@
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
+const INITIAL_DESK_ROTATION = [-0.01, -0.2, -0.1];
+const DESK_SWING_RANGE = Math.PI / 4;
+const DESK_SWING_SPEED = 0.8;
+
 const Computers = ({ scale, position }) => {
   const computer = useGLTF('./desktop_pc/scene.gltf');
+  const deskRef = useRef();
+
+  useFrame(({ clock }) => {
+    deskRef.current.rotation.y =
+      INITIAL_DESK_ROTATION[1] + Math.sin(clock.elapsedTime * DESK_SWING_SPEED) * DESK_SWING_RANGE;
+  });
 
   return (
     <mesh>
@@ -20,10 +30,11 @@ const Computers = ({ scale, position }) => {
         shadow-mapSize={1024}
       />
       <primitive 
+        ref={deskRef}
         object={computer.scene}
         scale={scale}
         position={position}
-        rotation={[-0.01, -0.2, -0.1]}
+        rotation={INITIAL_DESK_ROTATION}
       />
     </mesh>
   );
@@ -53,7 +64,7 @@ const ComputersCanvas = () => {
   return (
     <div style={{ width: '100%', height: '100%' }}>
       <Canvas
-        frameloop='demand'
+        frameloop='always'
         shadows
         camera={{ position: [20, 3, 5], fov: 25 }}
         gl={{ preserveDrawingBuffer: true }}

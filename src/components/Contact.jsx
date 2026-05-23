@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -22,7 +23,7 @@ const Contact = () => {
     if (!formContainerRef.current) return;
 
     const observer = new ResizeObserver(entries => {
-      for (let entry of entries) {
+      for (const entry of entries) {
         if (entry.contentRect) {
           setFormHeight(entry.contentRect.height);
         }
@@ -57,18 +58,19 @@ const Contact = () => {
         }),
       });
 
-      const result = await response.json();
+      const result = await response.json().catch(() => ({}));
       if (response.ok) {
-        alert("Message sent!");
+        toast.success("Message sent!");
         setForm({ name: '', email: '', message: '' });
       } else {
-        alert(result.error || "Something went wrong");
+        toast.error(result.error || "Something went wrong");
       }
     } catch (err) {
       console.error(err);
-      alert("Failed to send");
+      toast.error("Failed to send");
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (
@@ -127,8 +129,12 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            disabled={loading}
+            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl flex items-center gap-3 disabled:cursor-not-allowed disabled:opacity-70"
           >
+            {loading && (
+              <span className="h-4 w-4 rounded-full border-2 border-white border-t-transparent animate-spin" />
+            )}
             {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
