@@ -25,15 +25,14 @@ import javascript from "./tech/javascript.svg";
 import typescript from "./tech/typescript.svg";
 import go from "./tech/go.svg";
 import reactjs from "./tech/reactjs.svg";
-import tailwind from "./tech/tailwind.svg";
+import vuejs from "./tech/vuejs.png";
 import nodejs from "./tech/nodejs.svg";
 import flask from "./tech/flask.svg";
 import django from "./tech/django.svg";
 import aws from "./tech/aws.svg";
-import firebase from "./tech/firebase.svg";
 import docker from "./tech/docker.svg";
 import git from "./tech/git.svg";
-import postman from "./tech/postman.svg";
+import sentry from "./tech/sentry.png";
 import postgresql from "./tech/postgresql.svg";
 import mongodb from "./tech/mongodb.svg";
 import mysql from "./tech/mysql.svg";
@@ -105,15 +104,14 @@ export {
 	typescript,
 	go,
 	reactjs,
-	tailwind,
+	vuejs,
 	nodejs,
 	flask,
 	django,
 	aws,
-	firebase,
 	docker,
 	git,
-	postman,
+	sentry,
 	postgresql,
 	mongodb,
 	mysql,

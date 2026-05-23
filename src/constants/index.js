@@ -15,19 +15,18 @@ import {
 	javascript,
 	typescript,
 	go,
+	django,
 	reactjs,
-	tailwind,
+	vuejs,
 	nodejs,
 	flask,
-	django,
 	aws,
-	firebase,
 	docker,
 	git,
-	postman,
 	postgresql,
 	mongodb,
 	mysql,
+	sentry,
 	hexmodal,
 	emerest,
 	massEnergize,
@@ -136,12 +135,16 @@ const technologies = [
 		icon: go,
 	},
 	{
+		name: "Django",
+		icon: django,
+	},
+	{
 		name: "React JS",
 		icon: reactjs,
 	},
 	{
-		name: "Tailwind CSS",
-		icon: tailwind,
+		name: "Vue.js",
+		icon: vuejs,
 	},
 	{
 		name: "Node JS",
@@ -152,16 +155,8 @@ const technologies = [
 		icon: flask,
 	},
 	{
-		name: "Django",
-		icon: django,
-	},
-	{
 		name: "AWS",
 		icon: aws,
-	},
-	{
-		name: "Firebase",
-		icon: firebase,
 	},
 	{
 		name: "Docker",
@@ -170,10 +165,6 @@ const technologies = [
 	{
 		name: "Git",
 		icon: git,
-	},
-	{
-		name: "Postman",
-		icon: postman,
 	},
 	{
 		name: "PostgreSQL",
@@ -186,6 +177,10 @@ const technologies = [
 	{
 		name: "MySQL",
 		icon: mysql,
+	},
+	{
+		name: "Sentry",
+		icon: sentry,
 	},
 ];
 
